@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+*{
+    font-family: Sarabun;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background: #eee;*/
+    background-color: #f8f9fc;
+}
+
+#side_nav{
+    /*background: #000;*/
+    background-color: #fff;
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+hr.h-color{
+    background: #eee;
+    height: 2px;
+}
+
+.sidebar li.active{
+    /*background: #eee;*/
+    background-color: #2A529C;
+    border-radius: 8px;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover {
+    /*color: #000;*/
+    color: #fff;
+}
+.sidebar li a{
+    /*color: #fff;*/
+    color: #292727;
+}
+
+@media(max-width: 767px){
+    #side_nav{
+        margin-left: -250px;
+        position: absolute;
+        min-height: 100vh;
+        z-index: 1;
+
+    }
+    #side_nav.active{
+        margin-left: 0;
+    }
+
+    .Header, .Search{
+        display: none;
+    }
+}
